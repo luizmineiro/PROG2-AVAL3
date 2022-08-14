@@ -6,7 +6,7 @@ class Element{
   late Atom sym;
   late String name;
   late String latinName;
-  late String weight;
+  late int weight;
 
   Element(sy, na, la, we){
     sym = Atom(sy);
