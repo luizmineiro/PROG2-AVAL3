@@ -1,4 +1,4 @@
-import 'package:prova_prog2/prova_prog2.dart';
+/*import 'package:prova_prog2/Element.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -6,3 +6,4 @@ void main() {
     expect(calculate(), 42);
   });
 }
+*/
