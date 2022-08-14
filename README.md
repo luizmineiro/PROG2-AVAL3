@@ -1,2 +1,6 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# PROG2-AVAL3
+
+## Authors
+Fernando Soares de Araujo Filho <br>
+João Luiz Mineiro Alves <br>
+
