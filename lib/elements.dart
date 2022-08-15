@@ -29,3 +29,12 @@ class Elements{
  }
 
 }
+
+void main(List<String> args) {
+  Elements a = Elements();
+  a.forEach((elem) {
+      final text = '$elem\t${elem.name}\t${elem.latinName}\t${elem.weight}';
+      print(text);
+      }
+    );
+}
