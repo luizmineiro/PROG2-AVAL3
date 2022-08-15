@@ -1,15 +1,13 @@
 import 'dart:io';
-import 'package:prova_prog2/Element.dart';
+import 'package:prova_prog2/element.dart';
 
-class Elements{
- Elements._();
-
- static final Elements _instance = Elements._();
-
+class Elements extends Iterable{
+ 
+ 
  late File raw;
  late String elem;
  late List <String> table;
- List <Element> list = [];
+ final List <Element> list = [];
  late Element current;
  
  Elements(){
@@ -28,6 +26,8 @@ class Elements{
     list.add(current);
   }
  }
- 
+ @override
+ Iterator<Element> get iterator => list.iterator;
+  
 
 }
