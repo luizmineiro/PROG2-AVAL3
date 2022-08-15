@@ -3,4 +3,9 @@ class Atom{
     Atom( String sym ){
       symbol = sym;
     }
+    @override
+  String toString() {
+    String atom = '$symbol';
+    return atom;
+  }
 }

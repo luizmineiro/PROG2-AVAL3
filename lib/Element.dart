@@ -6,7 +6,7 @@ class Element{
   late Atom sym;
   late String name;
   late String latinName;
-  late int weight;
+  late String weight;
 
   Element(sy, na, la, we){
     sym = Atom(sy);
@@ -15,4 +15,9 @@ class Element{
     weight = we;
   }
   
+  @override
+  String toString() {
+    String text = '$sym';
+    return text;
+  }
 }
