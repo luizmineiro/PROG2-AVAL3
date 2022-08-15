@@ -86,7 +86,7 @@ void showElements() {
  * C2H3O2NH4          42
  * C12H22N2O4        140
  * C4H4O6KNa4H2O     149
- */
+ *
 void showMolecules(List<Molecule> molecules) {
   final tabs = [15, -6];
 
@@ -101,7 +101,7 @@ void showMolecules(List<Molecule> molecules) {
  * Tenta criar uma molécula a partir de uma
  * fórmula inválida.
  *
- */
+ *
 void createInvalidMolecule(String formula, String name) {
   try {
     final molecule = Molecule(
@@ -116,11 +116,12 @@ void createInvalidMolecule(String formula, String name) {
     print('Fórmula inválida: "$formula" ($name)');
   }
 }
-
+*/
+*/
 void main() {
   // Exibe uma tabela com todos os elementos químicos
   showElements();
-
+ /*
   // Lista de moléculas válidas
   final molecules = [
     Molecule(formula: 'F', name: 'Flúor'),
@@ -153,4 +154,5 @@ void main() {
   createInvalidMolecule('', 'Fórmula vazia');
   createInvalidMolecule('H2O1', 'Fórmula inválida da água: "1"');
   createInvalidMolecule('G2H5', 'Fórmula com elemento inexistente: "G"');
+  */
 }
