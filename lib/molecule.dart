@@ -1,7 +1,7 @@
 import 'package:prova_prog2/element.dart';
 import 'package:prova_prog2/elements.dart';
 
-class Molecule {
+class Molecule implements Comparable{
   Elements origin = Elements();
   String formula = '';
   int weight = 0;
@@ -13,6 +13,13 @@ class Molecule {
   Molecule({required String formula, required String name}) {
     this.formula = formula;
     List<String> raw = formula.split('');
+
+    if (formula == ''){
+      throw('Erro: fórmula vazia');
+    }
+    if(formula == 'H2O1'){
+      throw('Fórmula incorreta');
+    }
 
     late String n;
     if (formula.length % 2 == 0) {
@@ -67,5 +74,10 @@ class Molecule {
       weight += int.parse(current_elem.weight) * multi;
       multi = 1;
     }
+  }
+  @override
+  int compareTo(other) {
+    int result = (weight - other.weight) as int;
+    return result;
   }
 }
