@@ -1,5 +1,4 @@
 
-
 import 'package:prova_prog2/atom.dart';
 
 class Element{
