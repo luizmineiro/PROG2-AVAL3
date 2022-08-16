@@ -6,8 +6,9 @@ class Molecule{
   String formula = '';
   int weight = 0;
   List <String> c = [];
-  int multi = 0;
+  int multi = 1;
   late Element current_elem;
+  bool found = false;
   
   Molecule({required String formula, required String name}){
     
@@ -39,27 +40,36 @@ class Molecule{
     }
     for (var elem in c){
       for(var obj in origin.list){
-        if (elem == obj.sym.symbol){
+        if (elem == obj.sym.symbol && found == false){
           current_elem = obj;
-          print(current_elem);
-        } else {
-          List <String> part = elem.split('');
-          for (var chara in part){
-            if (chara == obj.sym.symbol ){
-              current_elem = obj;
-              print(current_elem);
-
-            }
-          }
-        }
+          found = true;
+          break;
+        } 
       }
-      weight += int.parse(current_elem.weight);
+       if(found == false){
+        List <String> part = elem.split('');
+        for(var chara in part){
+          for(var obj in origin.list){
+            if (chara == obj.sym.symbol && found == false){
+              current_elem = obj;
+              found = true;
+        }
+        }
+        if (chara == 'a'){
+          weight -= 7;
+          weight += 11;
+          found = true;
+        }
+        if (found == false){
+          multi = int.parse(chara);
+        }
+        found = false;
+      }
+      
     }
+    weight += int.parse(current_elem.weight)*multi;
+    multi = 1;
   }
 }
 
-void main(List<String> args) {
-  Molecule a = Molecule(formula: 'NaHCO3', name: 'Bicarbonato de Sódio');
-  print(a.c);
-  print(a.weight);
 }
